@@ -20,6 +20,8 @@ class Adherent(models.Model):
     ville = models.CharField(_("Ville"), max_length=100)
     mail = models.EmailField(_("E-Mail"), max_length=654)
     tel = models.CharField(_("Téléphone"), max_length=10)
+    acte_naissance = models.ImageField(_("Acte de Naissance"), upload_to='Adherents_acte')
+    
 
     def __str__(self):
         return self.nom, self.prenom
