@@ -24,10 +24,7 @@ class Adherent(models.Model):
     
 
     def __str__(self):
-        return self.nom, self.prenom
-
-    def __unicode__(self):
-        return 
+        return f"{self.nom} {self.prenom}"
     
     class Meta:
         verbose_name = 'Adherent'
