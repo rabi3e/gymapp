@@ -1,45 +1,47 @@
 
 {% extends "base.html" %}
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <body>
     {% block body %}
-    
-    <div class="table table-bordered border-primary">
-        <table class ="table table-bordered">
-          <thead>
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Image</th>
-                    <th scope="col">Nom</th>
-                    <th scope="col">Prenom</th>
-                    <th scope="col">Date de naissance</th>
-                    <th scope="col">Edit</th>
-                    
-                </tr>
-          </thead>
-          <tbody>
-                {% for object in object_list  %}
-                    <tr>
-                        <th scope="row">{{object.id}}</th>
-                        <td scope="4"><img src="{{object.image.url}}" alt=""
-                            style="width: 45px; height: 45px"
-                            class="rounded-circle"></td>
-                        <td>{{object.nom}}</td>
-                        <td>{{object.prenom}}</td>
-                        <td>{{object.dte_naissance}}</td>
-                    </tr>
-                {% endfor %}
-          </tbody>
-        </table>
-  
+    <br>
+
+    <br>
+    <div class="container ">
+        <div class="row justify-content-md-center">
+            <div class="col col-md-10 text-center">
+                <table class ="table table-bordered">
+                <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Prenom</th>
+                            <th scope="col">Date de naissance</th>
+                            <th scope="col">Edit</th>
+                            
+                        </tr>
+                </thead>
+                <tbody>
+                        {% for object in object_list  %}
+                            <tr>
+                                <th scope="row">{{object.id}}</th>
+                                <td scope="4"><img src="{{object.image.url}}" alt=""
+                                    style="width: 45px; height: 45px"
+                                    class="rounded-circle"></td>
+                                <td>{{object.nom}}</td>
+                                <td>{{object.prenom}}</td>
+                                <td>{{object.dte_naissance}}</td>
+                                <td>
+                                <button type="button" class="btn btn-danger btn-sm">Supprimer</button>
+                                <button type="button" class="btn btn-warning btn-sm">Modifier</button>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                </tbody>
+                </table>
+        
+            </div>
+        </div>    
     </div>
     {% endblock body %}
    

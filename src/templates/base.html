@@ -1,43 +1,50 @@
-<!DOCTYPE html>
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
-    <title>GYM V1</title>
-</head>
-<body>
 
-  <nav class="navbar navbar-expand-lg bg-danger">
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>Carousel Template · Bootstrap v5.3</title>
+    <link rel="stylesheet" href="{%static 'css/stylesperso.css'%}">
+
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/carousel.css'%}" rel="stylesheet">
+  </head>
+  <body>
+
+
+    
+<header data-bs-theme="dark">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#">GymGES</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Acceuil</a>
+            <a class="nav-link" href="#">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Adhérents</a>
+            <a class="nav-link" href="#">Adherent</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Abonements</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sport</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Documents</a>
-          </li>
+        </ul>
       </div>
     </div>
   </nav>
-  {% block body %}
-   
-  {% endblock body %}
-    
-<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-</body>
+</header>
+
+{% block body %}
+  
+{% endblock body %}
+<script src="{%static 'js/bootstrap.bundle.min.js'%}"></script>
+
+    </body>
 </html>
