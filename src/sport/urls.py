@@ -1,6 +1,9 @@
 from django.urls import path
-from . import views
+from .views import AdherentList
 
+
+app_name = 'sport'
 urlpatterns = [
-    path('',views.home)
+    path('',AdherentList.as_view(),name='adherent_liste')
+   
 ]

@@ -9,6 +9,7 @@ class Adherent(models.Model):
         ('M', 'Masculin'),
         ('F', 'Féminin'),
     ]
+
     nom = models.CharField(_("Nom"), max_length=150)
     prenom = models.CharField(_("Prénom"), max_length=50)
     sexe = models.CharField(_("Sexe"), max_length=1, choices= SEX_TYPE)
